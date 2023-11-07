@@ -127,9 +127,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96a38b918eb55b54792e470dbc04b624, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_movement_cycle: {fileID: 11400000, guid: 36e24a7db9e116845876899cdf134670, type: 2}
   m_move_speed: 1.5
   m_rotation_speed: 200
   m_life_time: 8
+  m_score: 100
 --- !u!54 &1482555287743958093
 Rigidbody:
   m_ObjectHideFlags: 0

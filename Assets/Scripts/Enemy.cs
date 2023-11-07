@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+	[Header("References")]
+	[SerializeField] AiMovementCycle m_movement_cycle;
+
 	[Header("Parameter")]
 	public float m_move_speed = 5;
 	public float m_rotation_speed = 200;
@@ -14,6 +17,7 @@ public class Enemy : MonoBehaviour
 
 	private void Start()
 	{
+		StartCoroutine(m_movement_cycle.MoveTask(this.transform));
 		StartCoroutine(MainCoroutine());
 	}
 
@@ -28,7 +32,7 @@ public class Enemy : MonoBehaviour
 		while (true)
 		{
 			//move
-			transform.position += new Vector3(0, -1, 0) * m_move_speed * Time.deltaTime;
+			//transform.position += new Vector3(0, -1, 0) * m_move_speed * Time.deltaTime;
 
 			//animation
 			transform.rotation *= Quaternion.AngleAxis(m_rotation_speed * Time.deltaTime, new Vector3(1, 1, 0));
