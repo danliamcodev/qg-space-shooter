@@ -10,8 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f0c06f45a937ecb4fbf9fa4b64ff087e, type: 3}
-  m_Name: Straight Down
+  m_Name: Diagonal Up Right
   m_EditorClassIdentifier: 
   m_movement_steps:
-  - m_movement_type: {fileID: 11400000, guid: f60cc6bf7f8d2ff4589de2526d947796, type: 2}
-    m_duration: 1
+  - m_movement_type: {fileID: 11400000, guid: e98b55d59f4eb68468c8ee5c60308f11, type: 2}
+    m_duration: 1.5
+  - m_movement_type: {fileID: 11400000, guid: b0c7d81a6d560694e955e2d25d6b4a27, type: 2}
+    m_duration: 3

@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f0c06f45a937ecb4fbf9fa4b64ff087e, type: 3}
-  m_Name: Straight Down
+  m_Script: {fileID: 11500000, guid: 366e44ec6cd069e448e0f3e7d80de771, type: 3}
+  m_Name: Triangle Combination
   m_EditorClassIdentifier: 
-  m_movement_steps:
-  - m_movement_type: {fileID: 11400000, guid: f60cc6bf7f8d2ff4589de2526d947796, type: 2}
-    m_duration: 1
+  m_movement_cylces:
+  - {fileID: 11400000, guid: 07d2b64e2a7ceb64cbbf2ae60ae8432b, type: 2}
+  - {fileID: 11400000, guid: 18bd4c359ee95f940890b56e71b7dd33, type: 2}

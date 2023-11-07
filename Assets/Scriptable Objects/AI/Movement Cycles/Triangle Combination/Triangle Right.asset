@@ -10,8 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f0c06f45a937ecb4fbf9fa4b64ff087e, type: 3}
-  m_Name: Straight Down
+  m_Name: Triangle Right
   m_EditorClassIdentifier: 
   m_movement_steps:
-  - m_movement_type: {fileID: 11400000, guid: f60cc6bf7f8d2ff4589de2526d947796, type: 2}
+  - m_movement_type: {fileID: 11400000, guid: 631f2bf2b6e2891499ce63264678c1ef, type: 2}
+    m_duration: 1
+  - m_movement_type: {fileID: 11400000, guid: 4d78fa4c93dbb55429b18b6a71333ab7, type: 2}
+    m_duration: 1
+  - m_movement_type: {fileID: 11400000, guid: 8fd8e2ef2e8f48d47af4e48fd78d479e, type: 2}
     m_duration: 1
