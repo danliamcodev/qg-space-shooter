@@ -45,7 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_prefab_enemy: {fileID: -815993105983958437, guid: bc5749eaadb203044a2e3afe7a642bdc, type: 3}
   m_spawn_delay: 0
-  m_spawn_interval: 2
+  m_spawn_interval: 1
   m_spawn_count: 3
 --- !u!1001 &7428133471515795636
 PrefabInstance:
@@ -62,6 +62,10 @@ PrefabInstance:
       propertyPath: m_spawn_delay
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1929255440728757481, guid: 0d93f92ceecad4145a3afafcd33b0be7, type: 3}
+      propertyPath: m_spawn_interval
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1929255440728757482, guid: 0d93f92ceecad4145a3afafcd33b0be7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.5
@@ -76,7 +80,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1929255441326404336, guid: 0d93f92ceecad4145a3afafcd33b0be7, type: 3}
       propertyPath: m_Name
-      value: Triangle Combination
+      value: Triangle Combination Variant
       objectReference: {fileID: 0}
     - target: {fileID: 1929255441326404350, guid: 0d93f92ceecad4145a3afafcd33b0be7, type: 3}
       propertyPath: m_RootOrder

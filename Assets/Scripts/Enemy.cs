@@ -47,7 +47,7 @@ public class Enemy : MonoBehaviour
 			transform.rotation *= Quaternion.AngleAxis(m_rotation_speed * Time.deltaTime, new Vector3(1, 1, 0));
 
 
-			//lifetime
+			//	
 			m_life_time -= Time.deltaTime;
 			if (m_life_time <= 0)
 			{

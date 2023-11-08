@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Triangle Combination East
   m_EditorClassIdentifier: 
   m_direction: {x: 1, y: 0, z: 0}
-  m_move_speed: {x: 2, y: 0, z: 0}
+  m_move_speed: {x: 4, y: 0, z: 0}

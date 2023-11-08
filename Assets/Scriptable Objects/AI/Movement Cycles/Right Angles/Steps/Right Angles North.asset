@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Right Angles North
   m_EditorClassIdentifier: 
   m_direction: {x: 0, y: 1, z: 0}
-  m_move_speed: {x: 0, y: 2, z: 0}
+  m_move_speed: {x: 0, y: 6, z: 0}
