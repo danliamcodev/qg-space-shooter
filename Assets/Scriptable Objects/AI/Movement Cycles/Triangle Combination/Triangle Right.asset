@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_movement_steps:
   - m_movement_type: {fileID: 11400000, guid: 631f2bf2b6e2891499ce63264678c1ef, type: 2}
-    m_duration: 1
+    m_duration: 0.5
   - m_movement_type: {fileID: 11400000, guid: 4d78fa4c93dbb55429b18b6a71333ab7, type: 2}
-    m_duration: 1
+    m_duration: 0.5
   - m_movement_type: {fileID: 11400000, guid: 8fd8e2ef2e8f48d47af4e48fd78d479e, type: 2}
-    m_duration: 1
+    m_duration: 0.5
