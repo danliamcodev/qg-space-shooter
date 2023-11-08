@@ -46,26 +46,6 @@ public class StageLoop : MonoBehaviour
 				player.StartRunning();
 			}
 		}
-
-		//create enemy spawner
-		{
-			{
-				EnemySpawner spawner = Instantiate(m_prefab_enemy_spawner, m_stage_transform);
-				if (spawner)
-				{
-					spawner.transform.position = new Vector3(-4, 4, 0);
-					spawner.StartRunning();
-				}
-			}
-			{
-				EnemySpawner spawner = Instantiate(m_prefab_enemy_spawner, m_stage_transform);
-				if (spawner)
-				{
-					spawner.transform.position = new Vector3(4, 4, 0);
-					spawner.StartRunning();
-				}
-			}
-		}
 	}
 
 	void CleanupStage()

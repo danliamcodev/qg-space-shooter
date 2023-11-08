@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Triangle Combination
   m_EditorClassIdentifier: 
   m_movement_cylces:
+  - {fileID: 11400000, guid: 91540ad025f9f574088ea01d84b7e3a2, type: 2}
   - {fileID: 11400000, guid: 07d2b64e2a7ceb64cbbf2ae60ae8432b, type: 2}
   - {fileID: 11400000, guid: 18bd4c359ee95f940890b56e71b7dd33, type: 2}

@@ -10,10 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f0c06f45a937ecb4fbf9fa4b64ff087e, type: 3}
-  m_Name: Left to Right
+  m_Name: Bullet Sponge Z Left
   m_EditorClassIdentifier: 
   m_movement_steps:
-  - m_movement_type: {fileID: 11400000, guid: c43c828c8340dbf4a8ea5704d8dad7de, type: 2}
-    m_duration: 1.4
-  - m_movement_type: {fileID: 11400000, guid: ee061b4b84fd5664d850732f987ea5ee, type: 2}
-    m_duration: 1.4
+  - m_movement_type: {fileID: 11400000, guid: aedcd7a8514709e4ea840f2d6ad59ed7, type: 2}
+    m_duration: 2
+  - m_movement_type: {fileID: 11400000, guid: 2c6bc78b0a4ecb34897a0d4c132fe693, type: 2}
+    m_duration: 2
+  - m_movement_type: {fileID: 11400000, guid: 5fe22b66e26597e4991c1245874582db, type: 2}
+    m_duration: 10

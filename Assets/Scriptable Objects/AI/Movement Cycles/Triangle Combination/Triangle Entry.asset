@@ -10,10 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f0c06f45a937ecb4fbf9fa4b64ff087e, type: 3}
-  m_Name: Left to Right
+  m_Name: Triangle Entry
   m_EditorClassIdentifier: 
   m_movement_steps:
-  - m_movement_type: {fileID: 11400000, guid: c43c828c8340dbf4a8ea5704d8dad7de, type: 2}
-    m_duration: 1.4
-  - m_movement_type: {fileID: 11400000, guid: ee061b4b84fd5664d850732f987ea5ee, type: 2}
-    m_duration: 1.4
+  - m_movement_type: {fileID: 11400000, guid: 160c370b60a004546ab0d19136fbdb83, type: 2}
+    m_duration: 0.8

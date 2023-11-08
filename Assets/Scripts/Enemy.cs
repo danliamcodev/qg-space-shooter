@@ -17,8 +17,17 @@ public class Enemy : MonoBehaviour
 
 	private void Start()
 	{
-		StartCoroutine(m_movement_cycle.MoveTask(this.transform));
 		StartCoroutine(MainCoroutine());
+	}
+
+	public void ConfigureEnemy(AiMovementCycle p_movement_cycle)
+    {
+		m_movement_cycle = p_movement_cycle;
+    }
+
+	public void ActivateEnemy()
+    {
+		StartCoroutine(m_movement_cycle.MoveTask(this.transform));
 	}
 
 	private void DeleteObject()

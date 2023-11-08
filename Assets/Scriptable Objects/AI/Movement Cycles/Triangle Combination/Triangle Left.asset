@@ -19,3 +19,5 @@ MonoBehaviour:
     m_duration: 1
   - m_movement_type: {fileID: 11400000, guid: a0d589491a57a1d4ca307be3faefe0a1, type: 2}
     m_duration: 1
+  - m_movement_type: {fileID: 11400000, guid: 9d66d32ab26883543ae326e80cba2162, type: 2}
+    m_duration: 10
