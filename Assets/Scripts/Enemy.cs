@@ -6,12 +6,14 @@ public class Enemy : MonoBehaviour
 {
 	[Header("References")]
 	[SerializeField] AiMovementCycle m_movement_cycle;
+	[SerializeField] SoundManager m_sound_manager;
 
 	[Header("Parameter")]
 	public float m_move_speed = 5;
 	public float m_rotation_speed = 200;
 	public float m_life_time = 5;
 	public int m_score = 100;
+	[SerializeField] AudioClip m_explosion_sfx;
 
 	//------------------------------------------------------------------------------
 
@@ -83,6 +85,8 @@ public class Enemy : MonoBehaviour
 		{
 			a_player_bullet.DeleteObject();
 		}
+
+		m_sound_manager.PlaySFX(m_explosion_sfx);
 
 		//delete self
 		DeleteObject();

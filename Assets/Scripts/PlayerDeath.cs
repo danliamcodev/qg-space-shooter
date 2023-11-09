@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class PlayerDeath : MonoBehaviour
 {
+    [Header("References")]
+    [SerializeField] SoundManager m_sound_manager;
+
+    [Header("Parameters")]
+    [SerializeField] AudioClip m_explosion_sfx;
+
     [Header("Events")]
     [SerializeField] VoidEvent m_player_died;
     private void OnTriggerEnter(Collider other)
@@ -24,7 +30,7 @@ public class PlayerDeath : MonoBehaviour
 
     private void OnDestroy()
     {
-        print("player died");
+        m_sound_manager.PlaySFX(m_explosion_sfx);
         m_player_died.Raise();
     }
 }

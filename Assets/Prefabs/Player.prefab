@@ -121,6 +121,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8af3f2f0a1780ab41990c3a1c6564e16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_sound_manager: {fileID: 11400000, guid: 5bcdc81f34b8db74491c22d03e2e638a, type: 2}
+  m_explosion_sfx: {fileID: 8300000, guid: a3ba0220a204a3d4fabc1fa59de4d946, type: 3}
   m_player_died: {fileID: 11400000, guid: 8f7ee9351a2cad749bd8147caa4c9536, type: 2}
 --- !u!1 &6205013781952291633
 GameObject:
