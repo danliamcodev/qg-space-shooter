@@ -27,7 +27,6 @@ public class EnemyShooting : MonoBehaviour
     private void ActivateShooting()
     {
         m_shooting_activated = true;
-        print("Shooting activated");
     }
 
     private IEnumerator DetectShootInputTask()

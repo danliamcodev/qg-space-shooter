@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class WaveSpawner : MonoBehaviour
 {
+	[Header("Events")]
+	[SerializeField] VoidEvent m_waves_finished;
     [Header("References")]
     [SerializeField] WaveOrder m_wave_order;
     [SerializeField] float m_spawn_interval = 5f;
@@ -15,7 +17,6 @@ public class WaveSpawner : MonoBehaviour
 
 	public IEnumerator SpawnWavesTask()
 	{
-		print("SPAWNING");
 		int waves_spawned = 0;
 		while (waves_spawned < m_wave_order.wave_order.Count)
 		{
@@ -27,6 +28,7 @@ public class WaveSpawner : MonoBehaviour
 			yield return new WaitForSeconds(m_spawn_interval);
 		}
 
-		print("WAVES DONE");
+		yield return new WaitForSeconds(2f);
+		m_waves_finished.Raise();
 	}
 }
