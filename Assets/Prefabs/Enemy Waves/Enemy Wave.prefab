@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21adf3c468347b548b28b94e38ff8aeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_prefab_enemy: {fileID: -815993105983958437, guid: bc5749eaadb203044a2e3afe7a642bdc, type: 3}
+  m_enemy_pool_controller: {fileID: 11400000, guid: e867daf97d3f1434d82e89f6b7883efe, type: 2}
   m_spawn_delay: 2
   m_spawn_interval: 2
   m_spawn_count: 5

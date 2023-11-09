@@ -8,8 +8,8 @@ using UnityEngine;
 /// </summary>
 public class EnemySpawner : MonoBehaviour
 {
-	[Header("Prefab")]
-	[SerializeField] Enemy m_prefab_enemy;
+	[Header("References")]
+	[SerializeField] ObjectPoolController m_enemy_pool_controller;
 
 	[Header("Parameter")]
 	[SerializeField] float m_spawn_delay = 0f;
@@ -29,16 +29,12 @@ public class EnemySpawner : MonoBehaviour
 		int enemies_spawned = 0;
 		while (enemies_spawned < m_spawn_count)
 		{
-			//spawn enemy
-			if (m_prefab_enemy)
-			{
-				Enemy enemy = Instantiate(m_prefab_enemy, transform.parent);
-				enemy.transform.position = transform.position;
-				enemy.ConfigureEnemy(p_ai_movement_cycle);
-				enemy.ActivateEnemy();
-				enemies_spawned++;
-			}
-
+			Enemy enemy = m_enemy_pool_controller.GetObject().GetComponent<Enemy>();
+			enemy.transform.position = transform.position;
+			enemy.gameObject.SetActive(true);
+			enemy.ConfigureEnemy(p_ai_movement_cycle);
+			enemy.ActivateEnemy();
+			enemies_spawned++;
 			yield return new WaitForSeconds(m_spawn_interval);
 		}
 	}

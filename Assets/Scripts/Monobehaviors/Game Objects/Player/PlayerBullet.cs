@@ -7,6 +7,9 @@ using UnityEngine;
 /// </summary>
 public class PlayerBullet : MonoBehaviour
 {
+	[Header("Reference")]
+	[SerializeField] ObjectPoolController m_bullet_pool_controller;
+
 	[Header("Parameter")]
 	public float m_move_speed = 5;
 	public float m_life_time = 2;
@@ -19,12 +22,12 @@ public class PlayerBullet : MonoBehaviour
 		m_life_time -= Time.deltaTime;
 		if (m_life_time <= 0)
 		{
-			DeleteObject();
+			ReturnToPool();
 		}
 	}
 
-	public void DeleteObject()
+	public void ReturnToPool()
 	{
-		GameObject.Destroy(gameObject);
+		m_bullet_pool_controller.ReturnObject(this.gameObject);
 	}
 }
