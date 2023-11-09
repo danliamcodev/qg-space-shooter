@@ -63,5 +63,9 @@ PrefabInstance:
       propertyPath: m_fire_rate
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8384297612656688302, guid: 9d27da6d40a168e4080c0819159f832c, type: 3}
+      propertyPath: m_shoot_sfx
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d27da6d40a168e4080c0819159f832c, type: 3}

@@ -89,5 +89,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_fire_rate: 0.4
+  m_shoot_sfx: {fileID: 8300000, guid: a09d993e282c5064da79458ea2cde63c, type: 3}
+  m_sound_manager: {fileID: 11400000, guid: 5bcdc81f34b8db74491c22d03e2e638a, type: 2}
   m_bullet_spawners:
   - {fileID: 6526924482229841779}
