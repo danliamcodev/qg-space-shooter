@@ -12,6 +12,9 @@ public class StageLoop : MonoBehaviour
 	static public StageLoop Instance { get; private set; }
 	#endregion
 
+	[Header("References")]
+	[SerializeField] SoundManager m_sound_manager;
+
 	[Header("Layout")]
 	public Transform m_stage_transform;
 	public Text m_stage_score_text;
@@ -19,6 +22,9 @@ public class StageLoop : MonoBehaviour
 	[Header("Prefab")]
 	public Player m_prefab_player;
 	public EnemySpawner m_prefab_enemy_spawner;
+
+	[Header("Parameters")]
+	[SerializeField] AudioClip m_bgm;
 
 	//
 	int m_game_score = 0;
@@ -28,6 +34,7 @@ public class StageLoop : MonoBehaviour
     private void Start()
     {
 		SetupStage();
+		m_sound_manager.PlayBGM(m_bgm);
     }
 
 	void SetupStage()
