@@ -15,6 +15,10 @@ PrefabInstance:
       propertyPath: m_prefab_player_bullet
       value: 
       objectReference: {fileID: 7941598295554223428, guid: 48d350c1a19c9fb41a9edf71f2515658, type: 3}
+    - target: {fileID: 6526924482229841779, guid: 9d27da6d40a168e4080c0819159f832c, type: 3}
+      propertyPath: m_bullet_pool_controller
+      value: 
+      objectReference: {fileID: 11400000, guid: c2820b5f3d0c2544cb59ba9141dc03c9, type: 2}
     - target: {fileID: 8382488558138274497, guid: 9d27da6d40a168e4080c0819159f832c, type: 3}
       propertyPath: m_RootOrder
       value: 0
