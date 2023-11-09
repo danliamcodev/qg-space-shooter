@@ -37,6 +37,7 @@ public class StageLoop : MonoBehaviour
 		m_game_score = 0;
 		RefreshScore();
 
+
 		//create player
 		{
 			Player player = Instantiate(m_prefab_player, m_stage_transform);

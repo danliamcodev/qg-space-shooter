@@ -14,7 +14,7 @@ public class PlayerBullet : MonoBehaviour
 	//
 	void Update()
 	{
-		transform.position += new Vector3(0, 1, 0) * m_move_speed * Time.deltaTime;
+		transform.position += transform.up * m_move_speed * Time.deltaTime;
 
 		m_life_time -= Time.deltaTime;
 		if (m_life_time <= 0)
