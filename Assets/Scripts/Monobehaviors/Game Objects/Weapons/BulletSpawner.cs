@@ -5,11 +5,12 @@ using UnityEngine;
 public class BulletSpawner : MonoBehaviour
 {
     [Header("References")]
-    public PlayerBullet m_prefab_player_bullet;
+    [SerializeField] ObjectPoolController m_bullet_pool_controller;
 
     public void SpawnBullet() {
-        PlayerBullet bullet = Instantiate(m_prefab_player_bullet);
+        GameObject bullet = m_bullet_pool_controller.GetObject();
         bullet.transform.position = transform.position;
         bullet.transform.rotation = transform.rotation;
+        bullet.SetActive(true);
     }
 }
