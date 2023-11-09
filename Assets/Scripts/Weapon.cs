@@ -19,7 +19,7 @@ public class Weapon : MonoBehaviour
 
     public void Shoot()
     {
-        if (Input.GetKey(KeyCode.Z) && m_fire_cooldown > 0)
+        if (m_fire_cooldown > 0)
         {
             return;
         }
