@@ -215,6 +215,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_movement_cycle: {fileID: 11400000, guid: 50a7bd2dfa83f9b4a9af9c3e5788cf14, type: 2}
   m_sound_manager: {fileID: 11400000, guid: 5bcdc81f34b8db74491c22d03e2e638a, type: 2}
+  m_enemy_pool_controller: {fileID: 11400000, guid: e867daf97d3f1434d82e89f6b7883efe, type: 2}
+  m_explosion_vfx_controller: {fileID: 11400000, guid: 7c6f7907229e04e40bf95f996b672dc0, type: 2}
+  m_enemy_killed: {fileID: 11400000, guid: a818d3baca2da1d4db5e60b4dd6410b8, type: 2}
   m_move_speed: 1.5
   m_rotation_speed: 200
   m_life_time: 20

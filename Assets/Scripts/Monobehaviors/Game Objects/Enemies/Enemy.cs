@@ -7,6 +7,11 @@ public class Enemy : MonoBehaviour
 	[Header("References")]
 	[SerializeField] AiMovementCycle m_movement_cycle;
 	[SerializeField] SoundManager m_sound_manager;
+	[SerializeField] ObjectPoolController m_enemy_pool_controller;
+	[SerializeField] ObjectPoolController m_explosion_vfx_controller;
+
+	[Header("Events")]
+	[SerializeField] VoidEvent m_enemy_killed;
 
 	[Header("Parameter")]
 	public float m_move_speed = 5;
@@ -32,9 +37,9 @@ public class Enemy : MonoBehaviour
 		StartCoroutine(m_movement_cycle.MoveTask(this.transform));
 	}
 
-	private void DeleteObject()
+	private void ReturnToPool()
 	{
-		GameObject.Destroy(gameObject);
+		m_enemy_pool_controller.ReturnObject(this.gameObject);
 	}
 
 	//
@@ -53,7 +58,7 @@ public class Enemy : MonoBehaviour
 			m_life_time -= Time.deltaTime;
 			if (m_life_time <= 0)
 			{
-				DeleteObject();
+				ReturnToPool();
 				yield break;
 			}
 
@@ -75,20 +80,21 @@ public class Enemy : MonoBehaviour
 	void DestroyByPlayer(PlayerBullet a_player_bullet)
 	{
 		//add score
-		if (StageLoop.Instance)
-		{
-			StageLoop.Instance.AddScore(m_score);
-		}
+		m_enemy_killed.Raise();
 
 		//delete bullet
 		if (a_player_bullet)
 		{
-			a_player_bullet.DeleteObject();
+			a_player_bullet.ReturnToPool();
 		}
 
 		m_sound_manager.PlaySFX(m_explosion_sfx);
+		ParticleSystem explosion_vfx = m_explosion_vfx_controller.GetObject().GetComponent<ParticleSystem>();
+		explosion_vfx.transform.position = this.transform.position;
+		explosion_vfx.gameObject.SetActive(false);
+		explosion_vfx.gameObject.SetActive(true);
 
 		//delete self
-		DeleteObject();
+		ReturnToPool();
 	}
 }

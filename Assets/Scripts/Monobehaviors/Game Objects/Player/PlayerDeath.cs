@@ -16,7 +16,7 @@ public class PlayerDeath : MonoBehaviour
     {
         if (other.gameObject.TryGetComponent<PlayerBullet>(out PlayerBullet bullet))
         {
-            Destroy(this.gameObject);
+            KillPlayerShip();
         }
     }
 
@@ -24,13 +24,14 @@ public class PlayerDeath : MonoBehaviour
     {
         if (collision.gameObject.TryGetComponent<Enemy>(out Enemy enemy))
         {
-            Destroy(this.gameObject);
+            KillPlayerShip();
         }
     }
 
-    private void OnDestroy()
+    private void KillPlayerShip()
     {
         m_sound_manager.PlaySFX(m_explosion_sfx);
         m_player_died.Raise();
+        this.gameObject.SetActive(false);
     }
 }
